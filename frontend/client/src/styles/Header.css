@@ -1,0 +1,143 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: Verdana, sans-serif;
+  border-bottom: 1px solid #e0e0e0;
+   z-index: 999;
+   position: fixed;
+}
+
+/* Barre du haut */
+.top-bar {
+  background-color: #222;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  font-size: 14px;
+  height: 50px; 
+}
+
+.contact-info span {
+  margin-right: 8px;
+}
+
+/* Boutons en haut */
+.top-actions a {
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500px;
+}
+
+.btn-outline {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: #B25E39;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #fffffe, #ffffff);
+  color: #B25E39;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Navigation principale */
+.main-nav {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  z-index: 1000;
+  background-color: #B25E39;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+.logo a {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Dropdown */
+.dropdown > span {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown svg {
+  margin-left: 2px; /* réduit l’espace entre texte et flèche */
+  width: 10px;
+  height: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover svg {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #B25E39;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 999;
+  border-radius: 4px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li:hover {
+  background-color: rgb(68, 67, 67);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
