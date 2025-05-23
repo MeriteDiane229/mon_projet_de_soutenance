@@ -42,9 +42,9 @@ const Header = () => {
                 </svg>
               </span>
               <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
-                <li><Link to="/Visite/site-touristique">Sites touristiques</Link></li>
-                <li><Link to="/Visite/guide-touristique">Guides touristiques</Link></li>
-                <li><Link to="/Visite/reservation">Réservation</Link></li>
+                <li><Link to="/visite/site-touristique">Sites touristiques</Link></li>
+                <li><Link to="/visite/guide-touristique">Guides touristiques</Link></li>
+                <li><Link to="/visite/reservation">Réservation</Link></li>
               </ul>
             </li>
             <li><Link to="/galerie">Galerie</Link></li>

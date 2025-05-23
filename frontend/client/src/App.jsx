@@ -25,13 +25,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/a-propos" element={<About />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/guides" element={<PageGuideTouristique />} />
-          <Route path="/guides/guide-touristique" element={<PageGuideTouristique />} />
-          <Route path="/guides/site-touristique" element={<SiteTouristique />} />
+          <Route path="/visite" element={<PageGuideTouristique />} />
+          <Route path="/visite/guide-touristique" element={<PageGuideTouristique />} />
+          <Route path="/visite/site-touristique" element={<SiteTouristique />} />
           <Route path="/site/:slug" element={<SiteDetail />} />
           <Route path="/sites" element={<SiteList />} />
           <Route path="/galerie" element={<GalleryPage />} />
-          <Route path="/guides/reservation" element={<Reservation />} />
+          <Route path="/visite/reservation" element={<Reservation />} />
           <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register/>} />
 
