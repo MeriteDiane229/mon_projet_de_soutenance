@@ -13,6 +13,8 @@ import GalleryPage from './pages/GalleryPage';
 import { CartProvider } from './context/CartContext';
 import Reservation from './pages/Reservation';
 import Contact from './pages/Contact'; 
+// Nouvelle page pour Culture Vodoun
+import CultureVodoun from './pages/CultureVodoun';
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
           <Route path="/guides/reservation" element={<Reservation />} />
           <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register/>} />
+
+        {/* Nouvelle page pour Culture Vodoun */}
+        <Route path="/culture-vodoun" element={<CultureVodoun />} />
         </Routes>
         <Footer />
       </Router>

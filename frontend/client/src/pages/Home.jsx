@@ -1,4 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Importer Link
 import './Home.css';
 
 const images = [
@@ -34,7 +36,6 @@ const Home = () => {
         ))}
         <div className="overlay">
           <h1>Bienvenue à Ouidah Culture</h1>
-         
           <p>Explorez les trésors historiques et culturels de Ouidah</p>
         </div>
       </div>
@@ -50,21 +51,24 @@ const Home = () => {
 
       {/* FEATURES */}
       <section className="features">
-        <div className="feature">
+        <Link to="/guides/site-touristique" className="feature">
           <img src="/img/ouidah1.jpeg" alt="Site touristique" />
           <h3>Sites touristiques</h3>
           <p>Visitez des lieux emblématiques comme la Route des Esclaves ou la Porte du Non-Retour.</p>
-        </div>
-        <div className="feature">
+          <button className="feature-button">Découvrir</button>
+        </Link>
+        <Link to="/CultureVodoun" className="feature">
           <img src="/img/ouidah2.jpeg" alt="Culture vodoun" />
           <h3>Culture Vodoun</h3>
           <p>Participez aux cérémonies traditionnelles et explorez les croyances endogènes.</p>
-        </div>
-        <div className="feature">
+          <button className="feature-button">Découvrir</button>
+        </Link>
+        <Link to="/galerie" className="feature">
           <img src="/img/ouidah3.jpg" alt="Galerie" />
           <h3>Galerie</h3>
           <p>Découvrez des œuvres uniques d’artistes locaux et de photographies culturelles.</p>
-        </div>
+          <button className="feature-button">Découvrir</button>
+        </Link>
       </section>
     </div>
   );

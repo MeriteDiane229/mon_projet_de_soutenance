@@ -3,13 +3,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 header {
   font-family: Verdana, sans-serif;
   border-bottom: 1px solid #e0e0e0;
-   z-index: 999;
-   position: fixed;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #222;
 }
 
 /* Barre du haut */
@@ -21,7 +25,7 @@ header {
   align-items: center;
   padding: 5px 20px;
   font-size: 14px;
-  height: 50px; 
+  height: 50px;
 }
 
 .contact-info span {
@@ -35,7 +39,7 @@ header {
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 14px;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .btn-outline {
@@ -46,12 +50,12 @@ header {
 
 .btn-outline:hover {
   background-color: white;
-  color: #B25E39;
+  color: #b25e39;
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #fffffe, #ffffff);
-  color: #B25E39;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  color: #b25e39;
   border: none;
   transition: 0.3s;
 }
@@ -62,14 +66,12 @@ header {
 
 /* Navigation principale */
 .main-nav {
-   display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  position: fixed;
-  z-index: 1000;
-  background-color: #B25E39;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+  background-color: #b25e39;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo a {
@@ -107,13 +109,16 @@ nav .nav-links {
 }
 
 .dropdown svg {
-  margin-left: 2px; /* réduit l’espace entre texte et flèche */
+  margin-left: 0; /* Espace réduit entre "Visite" et l'icône */
+  padding-left: 2px;
   width: 10px;
   height: 10px;
   transition: transform 0.3s ease;
+  fill: #ffffff;
 }
 
-.dropdown:hover svg {
+.dropdown:hover svg,
+.dropdown.show svg {
   transform: rotate(180deg);
 }
 
@@ -122,12 +127,16 @@ nav .nav-links {
   position: absolute;
   top: 110%;
   left: 0;
-  background-color: #B25E39;
+  background-color: #b25e39;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   min-width: 200px;
   z-index: 999;
   border-radius: 4px;
+}
+
+.dropdown-menu.show {
+  display: block; /* Affiche le menu quand la classe show est présente */
 }
 
 .dropdown-menu li {
@@ -139,5 +148,26 @@ nav .nav-links {
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: block; /* Maintient l'ouverture au survol pour desktop */
+}
+
+/* Media queries pour responsivité */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  .contact-info,
+  .top-actions {
+    margin: 5px 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .dropdown-menu {
+    position: static;
+    min-width: 100%;
+  }
 }

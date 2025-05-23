@@ -1,0 +1,40 @@
+.culture-vodoun-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.culture-vodoun-container h1 {
+  font-size: 2.5rem;
+  color: #b25e39;
+  margin-bottom: 1rem;
+}
+
+.culture-vodoun-container p {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.vodoun-details h2 {
+  font-size: 1.8rem;
+  color: #b25e39;
+  margin: 1.5rem 0 1rem;
+}
+
+.vodoun-details p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .culture-vodoun-container h1 {
+    font-size: 2rem;
+  }
+  .vodoun-details h2 {
+    font-size: 1.5rem;
+  }
+}
