@@ -51,7 +51,7 @@ const Home = () => {
 
       {/* FEATURES */}
       <section className="features">
-        <Link to="/guides/site-touristique" className="feature">
+        <Link to="/visite/site-touristique" className="feature">
           <img src="/img/ouidah1.jpeg" alt="Site touristique" />
           <h3>Sites touristiques</h3>
           <p>Visitez des lieux emblématiques comme la Route des Esclaves ou la Porte du Non-Retour.</p>
