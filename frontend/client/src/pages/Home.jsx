@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Importer Link
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const images = [
@@ -17,14 +16,12 @@ const Home = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 4000); // Change every 4s
-
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="home-container">
-      {/* SLIDESHOW */}
       <div className="slideshow">
         {images.map((src, index) => (
           <img
@@ -39,8 +36,6 @@ const Home = () => {
           <p>Explorez les trésors historiques et culturels de Ouidah</p>
         </div>
       </div>
-
-      {/* INTRO */}
       <section className="intro">
         <h2>Explorez nos trésors</h2>
         <p>
@@ -48,8 +43,6 @@ const Home = () => {
           de la spiritualité, laissez-vous emporter par son ambiance unique.
         </p>
       </section>
-
-      {/* FEATURES */}
       <section className="features">
         <Link to="/visite/site-touristique" className="feature">
           <img src="/img/ouidah1.jpeg" alt="Site touristique" />
@@ -57,7 +50,7 @@ const Home = () => {
           <p>Visitez des lieux emblématiques comme la Route des Esclaves ou la Porte du Non-Retour.</p>
           <button className="feature-button">Découvrir</button>
         </Link>
-        <Link to="/CultureVodoun" className="feature">
+        <Link to="/culture-vodoun" className="feature">
           <img src="/img/ouidah2.jpeg" alt="Culture vodoun" />
           <h3>Culture Vodoun</h3>
           <p>Participez aux cérémonies traditionnelles et explorez les croyances endogènes.</p>
