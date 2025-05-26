@@ -35,7 +35,8 @@ const Register = () => {
       try {
         // Ne pas inclure confirmPassword dans l'envoi au backend
         const { fullName, email, password, role } = formData;
-        const res = await fetch('ttps://ouidah-culture-frontend.onrender.com/register',{
+        const res = await fetch('https://ouidah-culture-backend.onrender.com/api/users/register',{
+          //  const res = await fetch('http://localhost:5000/api/users/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ fullName, email, password, role }),
