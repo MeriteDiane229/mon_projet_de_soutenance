@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/users"; // Backend base URL
+const API_URL ="https:ouidah-culture-backend.onrender.com/api/users";
+// const API_URL = "http://localhost:5000/api/users";
 
 // Register a new user
 export const registerUser = async (userData) => {
